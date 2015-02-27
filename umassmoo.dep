@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>474305867</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Exe\umassmoo.ulp</file>
+      <file>$PROJ_DIR$\Debug\Obj\sessions.r43</file>
+      <file>$PROJ_DIR$\quick_accel_sensor.c</file>
+      <file>$PROJ_DIR$\moo.c</file>
+      <file>$PROJ_DIR$\mymoo.h</file>
+      <file>$PROJ_DIR$\rfid.c</file>
+      <file>$PROJ_DIR$\rfid.h</file>
+      <file>$PROJ_DIR$\quick_accel_sensor.h</file>
+      <file>$PROJ_DIR$\moo.h</file>
+      <file>$PROJ_DIR$\sessions.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\umassmoo.d43</file>
+      <file>$PROJ_DIR$\Debug\Obj\rfid.r43</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xlsfn.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\moo.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\rfid.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\sessions.pbi</file>
+      <file>$PROJ_DIR$\sessions.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\umassmoo.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x26x.h</file>
+      <file>$TOOLKIT_DIR$\config\linker\multiplier.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\moo.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.pbi</file>
+      <file>$TOOLKIT_DIR$\config\linker\lnk430f2618.xcl</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ULP430</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>XLINK</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\quick_accel_sensor.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 21 12 18 6 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 21 12 18 6 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\moo.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 21 12 18 6 4 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 21 12 18 6 4 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rfid.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 21 12 18 6 4 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 21 12 18 6 4 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\sessions.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 4 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\umassmoo.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 25 22 23 19 11 1 13</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
