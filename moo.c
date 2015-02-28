@@ -47,7 +47,7 @@
 #if(MOO_VERSION != MOO1_1)
   #error "Moo version not supported"
 #endif
-
+#include <stdio.h>
 #include "moo.h"
 #include "rfid.h"
 
@@ -91,9 +91,9 @@ int main(void)
   DRIVE_ALL_PINS // set pin directions correctly and outputs to low.
 
   // Check power on bootup, decide to receive or sleep.
-  if(!is_power_good())
-    sleep();
-
+    if(!is_power_good()){
+          sleep();
+    }
   RECEIVE_CLOCK;
 
   TACTL = 0;
@@ -118,6 +118,9 @@ int main(void)
 #endif
   
   ackReplyCRC = crc16_ccitt(&ackReply[0], 4);
+  //if (ackReplyCRC == 0)
+  //  printf("crc failed");
+  
  //ackReplyCRC = crc16_ccitt(&ackReply[0], 14);
  ackReply[5] = (unsigned char)ackReplyCRC;
  ackReply[4] = (unsigned char)__swap_bytes(ackReplyCRC);
@@ -140,6 +143,7 @@ int main(void)
     if (TAR > 0x256 || delimiterNotFound)   // was 0x1000
     {
       if(!is_power_good()) {
+        printf("nogood");
         sleep();
       }
 
@@ -172,9 +176,14 @@ int main(void)
     case STATE_READ_SENSOR:
       {
 #if SENSOR_DATA_IN_ID
-	//read_sensor();
+	read_sensor();
          ackReplyCRC = crc16_ccitt(&ackReply[0], 4);
        // ackReplyCRC = crc16_ccitt(&ackReply[0], 14);
+         printf("%d\n",ackReplyCRC);
+         if (ackReplyCRC == 0){
+            printf("CE\n");
+         }
+                              
         ackReply[5] = (unsigned char)ackReplyCRC;
         ackReply[4] = (unsigned char)__swap_bytes(ackReplyCRC);
         

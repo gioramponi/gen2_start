@@ -6,89 +6,62 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\moo.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\rfid.r43</file>
-      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\rfid.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\Backup (5) of umassmoo.d43</file>
-      <file>$TOOLKIT_DIR$\config\lnk430F2618.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\sessions.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\Backup (5) of umassmoo.pbd</file>
-      <file>$PROJ_DIR$\moo.c</file>
-      <file>$PROJ_DIR$\quick_accel_sensor.c</file>
-      <file>$PROJ_DIR$\rfid.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\moo.pbi</file>
       <file>$PROJ_DIR$\moo.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\sessions.pbi</file>
+      <file>$PROJ_DIR$\moo.c</file>
       <file>$PROJ_DIR$\mymoo.h</file>
-      <file>$PROJ_DIR$\rfid.h</file>
-      <file>$PROJ_DIR$\sessions.c</file>
-      <file>$PROJ_DIR$\sessions.h</file>
-      <file>$PROJ_DIR$\quick_accel_sensor.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430x26x.h</file>
+      <file>$PROJ_DIR$\quick_accel_sensor.c</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.r43</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430xsfn.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\sessions.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\rfid.pbi</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
+      <file>$PROJ_DIR$\sessions.c</file>
+      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
+      <file>$PROJ_DIR$\rfid.c</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F2618.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\rfid.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\moo.r43</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x26x.h</file>
+      <file>$PROJ_DIR$\sessions.h</file>
+      <file>$PROJ_DIR$\quick_accel_sensor.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\quick_accel_sensor.r43</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\sessions.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\Backup (5) of umassmoo.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\moo.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\Backup (5) of umassmoo.d43</file>
+      <file>$PROJ_DIR$\rfid.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
     </outputs>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 7</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\Backup (5) of umassmoo.d43</name>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 8 4 1 2 3 9 24</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\Backup (5) of umassmoo.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 14 0 6 17</file>
-        </tool>
-      </inputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\moo.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 1</file>
+          <file> 22</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14</file>
+          <file> 31</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 15 23 5 16 19 18</file>
+          <file> 9 6 10 8 12 5 11 13 7 16 0 23 28 34 33 2 25</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 15 23 5 16 19 18</file>
+          <file> 9 6 10 8 5 11 13 7 16 0 23 28 34 33 2 25</file>
         </tool>
       </inputs>
     </file>
@@ -97,17 +70,49 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 2</file>
+          <file> 27</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 0</file>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 9 6 10 8 12 5 11 13 7 16 0 23 28 34 33 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 6 10 8 5 11 13 7 16 0 23 28 34 33 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\sessions.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 15 23 5 16 19 22</file>
+          <file> 2 25</file>
         </tool>
       </inputs>
     </file>
@@ -116,40 +121,39 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 3</file>
+          <file> 21</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 6</file>
+          <file> 15</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 30 29 26 27 25 28 33 31 32 34 15 23 5 16 19 18</file>
+          <file> 9 6 10 8 12 5 11 13 7 16 0 23 28 34 33 2 25</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 30 29 26 27 28 33 31 32 34 15 23 5 16 19 18</file>
+          <file> 9 6 10 8 5 11 13 7 16 0 23 28 34 33 2 25</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\sessions.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 9</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 17</file>
-        </tool>
-      </outputs>
+      <name>$PROJ_DIR$\Debug\Obj\Backup (5) of umassmoo.pbd</name>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 18</file>
+          <name>BILINK</name>
+          <file> 31 26 15 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\Backup (5) of umassmoo.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 20 18 22 27 21 29 4</file>
         </tool>
       </inputs>
     </file>

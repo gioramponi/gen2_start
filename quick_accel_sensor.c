@@ -1,5 +1,6 @@
 /* See license.txt for license information. */
 
+#include <stdio.h>
 #include "moo.h"
 #include "rfid.h"
 #include "quick_accel_sensor.h"
@@ -13,7 +14,7 @@ void init_sensor()
 
 void read_sensor()
 {
-
+/*
   // turn off comparator
   P1OUT &= ~RX_EN_PIN;
 
@@ -49,8 +50,8 @@ void read_sensor()
   ADC12CTL0 |= ENC;
   ADC12CTL0 |= ADC12SC;
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
-  ackReply[4] = (ADC12MEM0 & 0xff);
-  ackReply[3] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
+ // ackReply[4] = (ADC12MEM0 & 0xff);
+//  ackReply[3] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
 
   // GRAB DATA
   ADC12CTL0 &= ~ENC; // make sure this is off otherwise settings are locked.
@@ -60,8 +61,8 @@ void read_sensor()
   ADC12CTL0 |= ENC;
   ADC12CTL0 |= ADC12SC;
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
-  ackReply[6] = (ADC12MEM0 & 0xff);
-  ackReply[5] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
+ // ackReply[6] = (ADC12MEM0 & 0xff);
+ // ackReply[5] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
 
   // GRAB DATA
   ADC12CTL0 &= ~ENC; // make sure this is off otherwise settings are locked.
@@ -71,8 +72,8 @@ void read_sensor()
   ADC12CTL0 |= ENC;
   ADC12CTL0 |= ADC12SC;
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
-  ackReply[8] = (ADC12MEM0 & 0xff);
-  ackReply[7] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
+ // ackReply[8] = (ADC12MEM0 & 0xff);
+  //ackReply[7] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
 
   // Power off sensor and adc
   P1DIR &= ~ACCEL_POWER;
@@ -80,12 +81,17 @@ void read_sensor()
   ADC12CTL0 &= ~ENC;
   ADC12CTL1 = 0;       // turn adc off
   ADC12CTL0 = 0;       // turn adc off
-
+*/
   // Store sensor read count
+ // printf("accel");
   sensor_counter++;
-  ackReply[10] = (sensor_counter & 0x00ff);
-  ackReply[9]  = (sensor_counter & 0xff00) >> 8; // grab msb bits and store it
+  ackReply[3] = (sensor_counter & 0x00ff);
+  ackReply[2]  = (sensor_counter & 0xff00) >> 8; // grab msb bits and store it
+
+ // sensor_counter++;
+  //ackReply[10] = (sensor_counter & 0x00ff);
+  //ackReply[9]  = (sensor_counter & 0xff00) >> 8; // grab msb bits and store it
 
   // turn on comparator
-  P1OUT |= RX_EN_PIN;
+ // P1OUT |= RX_EN_PIN;
 }
