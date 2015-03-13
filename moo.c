@@ -74,7 +74,7 @@ unsigned short TRcal=0;
 
 int i;
 
-#define READ_ACCEL_CYCLES 16
+#define READ_ACCEL_CYCLES 2
 
 int main(void)
 {
@@ -114,16 +114,17 @@ int main(void)
 #if SENSOR_DATA_IN_ID
   // this branch is for sensor data in the id
   state = STATE_READ_SENSOR;
-//  timeToSample++;
+  timeToSample++;
 #endif
   
-  ackReplyCRC = crc16_ccitt(&ackReply[0], 4);
+ ackReplyCRC = crc16_ccitt(&ackReply[0], 6);
   //if (ackReplyCRC == 0)
   //  printf("crc failed");
   
  //ackReplyCRC = crc16_ccitt(&ackReply[0], 14);
- ackReply[5] = (unsigned char)ackReplyCRC;
- ackReply[4] = (unsigned char)__swap_bytes(ackReplyCRC);
+
+ ackReply[7] = (unsigned char)ackReplyCRC;
+ ackReply[6] = (unsigned char)__swap_bytes(ackReplyCRC);
 // ackReply[15] = (unsigned char)ackReplyCRC;
 // ackReply[14] = (unsigned char)__swap_bytes(ackReplyCRC); //swap_bytes serve per poter mettere i primi 8 bit di ackReplyCRC nella 14esima posizione
 // #endif
@@ -143,7 +144,7 @@ int main(void)
     if (TAR > 0x256 || delimiterNotFound)   // was 0x1000
     {
       if(!is_power_good()) {
-        printf("nogood");
+        //printf("nogood");
         sleep();
       }
 
@@ -177,16 +178,13 @@ int main(void)
       {
 #if SENSOR_DATA_IN_ID
 	read_sensor();
-         ackReplyCRC = crc16_ccitt(&ackReply[0], 4);
+        ackReplyCRC = crc16_ccitt(&ackReply[0], 6);
        // ackReplyCRC = crc16_ccitt(&ackReply[0], 14);
-         printf("%d\n",ackReplyCRC);
-         if (ackReplyCRC == 0){
-            printf("CE\n");
-         }
-                              
-        ackReply[5] = (unsigned char)ackReplyCRC;
-        ackReply[4] = (unsigned char)__swap_bytes(ackReplyCRC);
-        
+       //  printf("%d\n",ackReplyCRC);
+
+        ackReply[7] = (unsigned char)ackReplyCRC;
+        ackReply[6] = (unsigned char)__swap_bytes(ackReplyCRC);
+     //   printf("a/n");
        // ackReply[15] = (unsigned char)ackReplyCRC;
         //ackReply[14] = (unsigned char)__swap_bytes(ackReplyCRC);
         state = STATE_READY;
@@ -1034,7 +1032,8 @@ unsigned short crc16_ccitt(volatile unsigned char *data, unsigned short n) {
       }
     }
   }
-  return(crc_16^0xffffu);
+ // printf("%d\n", crc_16);
+  return(crc_16^0xffff);
 }
 
 inline void crc16_ccitt_readReply(unsigned int numDataBytes)

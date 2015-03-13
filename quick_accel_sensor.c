@@ -14,7 +14,7 @@ void init_sensor()
 
 void read_sensor()
 {
-/*
+
   // turn off comparator
   P1OUT &= ~RX_EN_PIN;
 
@@ -52,7 +52,8 @@ void read_sensor()
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
  // ackReply[4] = (ADC12MEM0 & 0xff);
 //  ackReply[3] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
-
+ ackReply[5] = (ADC12MEM0 & 0xff);
+  ackReply[4] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
   // GRAB DATA
   ADC12CTL0 &= ~ENC; // make sure this is off otherwise settings are locked.
   ADC12CTL0 = ADC12ON + SHT0_1;
@@ -81,7 +82,7 @@ void read_sensor()
   ADC12CTL0 &= ~ENC;
   ADC12CTL1 = 0;       // turn adc off
   ADC12CTL0 = 0;       // turn adc off
-*/
+
   // Store sensor read count
  // printf("accel");
   sensor_counter++;

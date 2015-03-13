@@ -23,7 +23,7 @@ volatile unsigned char queryReply[]= { 0x00, 0x03, 0xFF, 0x00};
 // ackReply:  First two bytes are the preamble.  Last two bytes are the crc.
 
 
-volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00};
+volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 //volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}; ackReply completo
 //volatile unsigned char ackReply[] = { 0x30, 0x00, EPC, 0x00, 0x00}
 
@@ -567,7 +567,7 @@ void handle_ack(volatile short nextState)
   
  // ackReply[3] = 0xff;
 //  ackReply[4] = 0xff;
-  sendToReader(&ackReply[0],49);
+  sendToReader(&ackReply[0],65);
   //sendToReader(&ackReply[0], 129);
   state = nextState;
 }
