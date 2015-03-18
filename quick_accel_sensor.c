@@ -52,8 +52,8 @@ void read_sensor()
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
  // ackReply[4] = (ADC12MEM0 & 0xff);
 //  ackReply[3] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
- ackReply[5] = (ADC12MEM0 & 0xff);
-  ackReply[4] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
+ //ackReply[5] = (ADC12MEM0 & 0xff);
+  //ackReply[4] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
   // GRAB DATA
   ADC12CTL0 &= ~ENC; // make sure this is off otherwise settings are locked.
   ADC12CTL0 = ADC12ON + SHT0_1;
@@ -64,6 +64,8 @@ void read_sensor()
   while (ADC12CTL1 & ADC12BUSY);    // wait while ADC finished work
  // ackReply[6] = (ADC12MEM0 & 0xff);
  // ackReply[5] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
+  ackReply[5] = (ADC12MEM0 & 0xff);
+  ackReply[4] = (ADC12MEM0 & 0x0f00) >> 8; // grab msb bits and store it
 
   // GRAB DATA
   ADC12CTL0 &= ~ENC; // make sure this is off otherwise settings are locked.

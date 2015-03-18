@@ -74,7 +74,7 @@ unsigned short TRcal=0;
 
 int i;
 
-#define READ_ACCEL_CYCLES 2
+#define READ_ACCEL_CYCLES 3
 
 int main(void)
 {

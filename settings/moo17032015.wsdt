@@ -16,6 +16,11 @@
           <Column3>27</Column3>
         </ColumnWidths>
       </Workspace>
+      <Find-in-Files>
+        <ColumnWidth0>470</ColumnWidth0>
+        <ColumnWidth1>67</ColumnWidth1>
+        <ColumnWidth2>806</ColumnWidth2>
+      </Find-in-Files>
       <Build>
         <ColumnWidth0>20</ColumnWidth0>
         <ColumnWidth1>980</ColumnWidth1>
@@ -29,10 +34,10 @@
       </Debug-Log>
     </Static>
     <Windows>
-      <Wnd2>
+      <Wnd0>
         <Tabs>
           <Tab>
-            <Identity>TabID-28900-19762</Identity>
+            <Identity>TabID-3425-3888</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
@@ -43,24 +48,30 @@
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
+      </Wnd0>
+      <Wnd1>
         <Tabs>
           <Tab>
-            <Identity>TabID-607-19882</Identity>
+            <Identity>TabID-32597-4365</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-31510-5818</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
           <Tab>
-            <Identity>TabID-21581-19899</Identity>
+            <Identity>TabID-30464-5838</Identity>
             <TabName>Debug Log</TabName>
             <Factory>Debug-Log</Factory>
             <Session/>
           </Tab>
         </Tabs>
-        <SelectedTab>1</SelectedTab>
-      </Wnd3>
+        <SelectedTab>2</SelectedTab>
+      </Wnd1>
     </Windows>
     <Editor>
       <Pane>
@@ -70,13 +81,45 @@
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\sessions.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\quick_accel_sensor.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\quick_accel_sensor.c</Filename>
+          <XPos>0</XPos>
+          <YPos>44</YPos>
+          <SelStart>1784</SelStart>
+          <SelEnd>1784</SelEnd>
+        </Tab>
+        <ActiveTab>3</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\moo.c</Filename>
           <XPos>0</XPos>
-          <YPos>60</YPos>
-          <SelStart>3178</SelStart>
-          <SelEnd>3178</SelEnd>
+          <YPos>603</YPos>
+          <SelStart>19669</SelStart>
+          <SelEnd>19669</SelEnd>
         </Tab>
-        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\rfid.c</Filename>
+          <XPos>0</XPos>
+          <YPos>3</YPos>
+          <SelStart>790</SelStart>
+          <SelEnd>790</SelEnd>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -91,16 +134,16 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-029735f8>
+            <Toolbar-033e35f8>
               <key>iaridepm.enu1</key>
-            </Toolbar-029735f8>
+            </Toolbar-033e35f8>
           </Sizes>
         </Row0>
       </Top>
       <Left>
         <Row0>
           <Sizes>
-            <Wnd2>
+            <Wnd0>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -115,7 +158,7 @@
                 <sizeVertCX>146413</sizeVertCX>
                 <sizeVertCY>648175</sizeVertCY>
               </Rect>
-            </Wnd2>
+            </Wnd0>
           </Sizes>
         </Row0>
       </Left>
@@ -127,7 +170,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd3>
+            <Wnd1>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -142,7 +185,7 @@
                 <sizeVertCX>146413</sizeVertCX>
                 <sizeVertCY>291971</sizeVertCY>
               </Rect>
-            </Wnd3>
+            </Wnd1>
           </Sizes>
         </Row0>
       </Bottom>
