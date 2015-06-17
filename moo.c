@@ -74,7 +74,7 @@ unsigned short TRcal=0;
 
 int i;
 
-#define READ_ACCEL_CYCLES 3
+#define READ_ACCEL_CYCLES 2
 
 int main(void)
 {
@@ -377,7 +377,7 @@ static inline void setup_to_receive()
 
 inline void sleep()
 {
-  P1OUT &= ~RX_EN_PIN;
+  P1OUT &= ~RX_EN_PIN; //turn off comparator
   // enable port interrupt for voltage supervisor
   P2IES = 0;
   P2IFG = 0;

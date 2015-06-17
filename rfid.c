@@ -16,14 +16,15 @@ unsigned char subcarrierNum = 0;
 unsigned char timeToSample = 0;
 unsigned short inInventoryRound = 0;
 volatile short state;
+unsigned int count = 0;
 volatile unsigned char cmd[CMD_BUFFER_SIZE+1]; // stored command from reader
 
 volatile unsigned char queryReply[]= { 0x00, 0x03, 0xFF, 0x00};
 
 // ackReply:  First two bytes are the preamble.  Last two bytes are the crc.
 
-
-volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+volatile unsigned char ackReply[] = { 0x00, 0x00, 0x55, 0x55, 0x00, 0x00,0x00, 0x00, 0x55, 0x55, 0x00, 0x00, 0x00, 0x00, 0x55, 0x55, 0x00, 0x00,0x00, 0x00, 0x55, 0x55, 0x00, 0x00};
+//volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 //volatile unsigned char ackReply[] = { 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}; ackReply completo
 //volatile unsigned char ackReply[] = { 0x30, 0x00, EPC, 0x00, 0x00}
 
@@ -567,7 +568,20 @@ void handle_ack(volatile short nextState)
   
  // ackReply[3] = 0xff;
 //  ackReply[4] = 0xff;
-  sendToReader(&ackReply[0],65);
+  count++;
+  ackReply[1] = (count & 0x00ff);
+  ackReply[0]  = (count & 0xff00) >> 8; // grab msb bits and store it
+  ackReply[5] = (count & 0x00ff);
+  ackReply[4]  = (count & 0xff00) >> 8;
+  
+  ackReply[7] = (count & 0x00ff);
+  ackReply[6]  = (count & 0xff00) >> 8;
+  
+  ackReply[11] = (count & 0x00ff);
+  ackReply[10]  = (count & 0xff00) >> 8;
+ // sendToReader(&ackReply[0],49);
+    sendToReader(&ackReply[0],193);
+ // sendToReader(&ackReply[0],65);
   //sendToReader(&ackReply[0], 129);
   state = nextState;
 }
